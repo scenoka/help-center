@@ -34,7 +34,12 @@ export default function Home() {
     <div className={styles.container}>
       <header className={styles.header}>
         <Link href="/" className={styles.logo}>Acme Corp</Link>
-        <button onClick={toggleTheme} className={styles.themeToggle}>
+        <button
+          onClick={toggleTheme}
+          className={styles.themeToggle}
+          aria-label={theme === 'light' ? 'Switch to dark theme' : 'Switch to light theme'}
+          aria-pressed={theme === 'dark'}
+        >
           <FontAwesomeIcon icon={theme === 'light' ? faMoon : faSun} />
         </button>
       </header>

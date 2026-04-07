@@ -9,7 +9,7 @@ export const ThemeProvider = ({ children }) => {
 
   useEffect(() => {
     const storedTheme = localStorage.getItem('theme');
-    if (storedTheme) {
+    if (storedTheme === 'light' || storedTheme === 'dark') {
       setTheme(storedTheme);
     }
   }, []);

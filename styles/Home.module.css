@@ -192,67 +192,79 @@
   color: #cbd5e0; /* Lighter color on hover */
 }
 
+.visuallyHidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
 /* Dark Mode adjustments for Home.module.css */
 /* You might need to add specific dark mode overrides for components in this file */
 /* For example, if a card has a light background, you\'ll want to change it for dark mode */
 
-body.dark-mode .search {
+:global(body.dark-mode) .search {
   background-color: #2d3748; /* Darker search input background */
   border-color: #4a5568; /* Darker border */
   color: #e2e8f0; /* Light text for input */
 }
 
-body.dark-mode .search::placeholder {
+:global(body.dark-mode) .search::placeholder {
   color: #a0aec0; /* Lighter placeholder text */
 }
 
-body.dark-mode .search:focus {
+:global(body.dark-mode) .search:focus {
   border-color: #63b3ed; /* Lighter blue for focus */
   background-color: #1a202c;
 }
 
-body.dark-mode .categoryCard {
+:global(body.dark-mode) .categoryCard {
   background: #2d3748; /* Darker card background */
   border-color: #4a5568;
 }
 
-body.dark-mode .categoryCard:hover {
+:global(body.dark-mode) .categoryCard:hover {
   border-color: #63b3ed;
 }
 
-body.dark-mode .categoryCard h2 {
+:global(body.dark-mode) .categoryCard h2 {
   color: #e2e8f0;
 }
 
-body.dark-mode .categoryCard p,
-body.dark-mode .articleCount {
+:global(body.dark-mode) .categoryCard p,
+:global(body.dark-mode) .articleCount {
   color: #a0aec0;
 }
 
-body.dark-mode .searchResults {
+:global(body.dark-mode) .searchResults {
   background: #2d3748;
   box-shadow: 0 1px 3px rgba(0,0,0,0.3); /* Adjust shadow for dark mode */
 }
 
-body.dark-mode .searchResults li a {
+:global(body.dark-mode) .searchResults li a {
   color: #e2e8f0;
 }
 
-body.dark-mode .searchResults li a:hover {
+:global(body.dark-mode) .searchResults li a:hover {
   color: #63b3ed;
 }
 
-body.dark-mode .footer {
+:global(body.dark-mode) .footer {
   border-top-color: #4a5568;
 }
 
-body.dark-mode .footerLogo,
-body.dark-mode .footerLink,
-body.dark-mode .socialIcon {
+:global(body.dark-mode) .footerLogo,
+:global(body.dark-mode) .footerLink,
+:global(body.dark-mode) .socialIcon {
   color: #a0aec0;
 }
 
-body.dark-mode .footerLink:hover,
-body.dark-mode .socialIcon:hover {
+:global(body.dark-mode) .footerLink:hover,
+:global(body.dark-mode) .socialIcon:hover {
   color: #e2e8f0;
 }

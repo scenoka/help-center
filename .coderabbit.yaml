@@ -48,7 +48,6 @@ reviews:
 # Chat settings
 chat:
   auto_reply: true
-  create_issues: true
 
 # Knowledge base settings
 knowledge_base:
