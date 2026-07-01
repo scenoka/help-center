@@ -1,5 +1,7 @@
 # math_utils.py - Mathematical and Statistical utility functions
 def mean(numbers):
+  if len(numbers) == 0:
+    raise ValueError("mean() requires at least one number")
   return sum(numbers) / len(numbers)
 
 def maximum(numbers): return max(numbers)
@@ -7,7 +9,15 @@ def maximum(numbers): return max(numbers)
 def minimum(numbers): return min(numbers)
 
 def range_of(numbers):
-  return max(numbers) - min(numbers)
+  if len(numbers) == 0:
+    raise ValueError("numbers must not be empty")
+  current_min = current_max = numbers[0]
+  for num in numbers[1:]:
+    if num < current_min:
+      current_min = num
+    if num > current_max:
+      current_max = num
+  return current_max - current_min
 
 def add(a, b): return a + b
 
